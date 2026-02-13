@@ -1,0 +1,179 @@
+
+input,textarea
+{
+    border: 1px solid var(--input_line_color);
+    border-radius: 5px;
+}
+
+input,textarea:focus
+{
+    outline: none;
+}
+select
+{
+    border: 1px solid var(--input_line_color);
+    border-radius: 5px;
+}
+
+td
+{
+    font-size: 18px;
+}
+
+.frm_user_info
+{
+        width: 100%;
+        display: grid;
+        grid-template-areas: "users_info" "footer";
+        gap: 20px;
+        grid-template-columns: 1fr ;
+        grid-template-rows: 30rem auto;
+}
+
+
+.frm_user_info table
+{
+    grid-area: users_info;
+    border-radius: 20px;
+    background-color: var(--bg_main_color);
+    border: 1px solid var(--line_color);
+   
+
+}
+.frm_user_info table th
+{
+    border-bottom: 1px solid var(--line_color);
+    height: 3rem;
+}
+
+.frm_user_info td
+{
+     padding: 20px;
+}
+
+.input_username
+{
+    display: flex;
+    flex-direction: column;
+    width: 30rem;
+    justify-content: center;
+}
+
+.input_username input
+{
+    width: 26rem;
+    height: 1.5rem;
+}
+
+.gender_container
+{
+    display: flex;
+    justify-content: space-between;
+    width: 11rem;
+}
+
+.date_select
+{
+    display: flex;
+    flex-direction: column;
+}
+
+.select_role
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.select_role select
+{
+    width: 6rem;
+    height: 1.8rem;
+    border: 1px solid var(--input_line_color);
+}
+
+.company_Container
+{
+    display: flex;
+    flex-direction: column;
+}
+
+.company_Container textarea
+{
+    height: 9rem;
+    resize: none;
+}
+
+.upload_user_img
+{
+    height: 25rem;   
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.users_img_area
+{
+    border: 1px dotted;
+    width: 50rem;
+    height: 40rem;
+    margin: 20px;
+}
+
+.users_img_area:hover
+{
+    border-color: var(--highlight_color);
+}
+
+.frm_footer
+{
+    background-color: var(--bg_main_color);
+    grid-area: footer;
+    display: flex;
+    flex-direction: column;
+    height: 30rem;
+    border: 1px solid var(--line_color);
+    border-radius: 20px;
+}
+
+.frm_footer button
+{
+    color: var(--bg_main_color);
+    font-size: 1.1rem;
+    height: 50px;
+    background-color: var(--highlight_color);
+    margin: 10px;
+    font-weight: bold;
+    border-radius: 10px;
+    border:0 ;
+    cursor: pointer;
+}
+
+.user_img
+{
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.user_img input
+{
+    display: none;
+}
+.user_img label
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+}
+.Upload_user_img_frm_header
+{
+    color: var(--text_main_color);
+}

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../style/login_page/logic_layout.css">
+    <link rel="stylesheet" href="../style/login_page/login_form.css">
+    <link rel="stylesheet" href="../style/login_page/login_side_area.css">
+    <script src="https://kit.fontawesome.com/bc84d83093.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="side_area">
+       <div class="side_area_logo"> <span> <img class ="logo_img"  src="../assets/images/API_logo.png"> User API Manager</span>
+         <p>My User API Manager demo </p>
+        </div>  
+        <button class="btn_login_light_toogle"><i class="fa-regular fa-moon"></i></button>
+    </div>
+    <div class="main_area">
+        <div class="login_content">
+            <div class="login_area_header">
+            <a href="../index.html"><i class="fa-solid fa-angle-left"></i> Back to bashboard</a>
+
+        </div>
+        <div class="login_box">
+            <form class="login_frm" id="login">
+            <div class="login_header">
+                <div class ="login_title"><span>Sign In</span>
+                    <p>Enter your email and password to sign in!</p>
+                </div>
+                <div class="select_login">
+                    <div class="log_opt"><img class="icon_img" src="../assets/images/Google_icon.png"> Sign in with google</div>
+                    <div class ="log_opt"><img class="icon_img" src="../assets/images/X_icon.png"> Sign in with X</div>
+                </div>
+                <div class = "header_login_line">
+                    <span>or</span>
+                </div>
+            </div>
+            <table>
+                <tr>
+                    <td class="username"><p>Email*</p><input type="text" placeholder="info@gmail.com" id="input_username" required></td>
+                </tr>
+                <tr>
+                    <td class="password"><p>Password*</p><input type="password" placeholder="Enter your password"  id="input_password" required></td>
+                </tr>
+                <tr>
+                    <td class="login_support_text">
+                        <div class="logged_checkbox">
+                            <input type="checkbox"> <p>Keep me logged in</p>
+                        </div>
+
+                        <a href="">Forgot password?</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td class = 'login'><button type="submit" class="btn_login">Login</button></td>
+                </tr>
+                <tr>
+                    <td>Don't have an account? <a href="">Sign Up</a></td>
+                </tr>
+            </table>
+        </form>
+        </div>
+        </div>
+    </div>
+    <script src="../services/loggin.js"></script>
+</body>
+</html>

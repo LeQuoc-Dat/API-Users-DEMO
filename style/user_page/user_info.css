@@ -1,0 +1,328 @@
+
+input:focus
+{
+    outline: none;
+}
+.users_list_display_container
+{
+        border-spacing: 0;
+        background-color: var(--bg_main_color);
+        width: 100%;
+}
+
+.users_list_display_container th, td
+{
+    border-bottom: 1px solid var(--line_color);
+    padding-left: 20px;
+    text-align: start;
+}
+
+.users_list_display_container_header
+{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 10px;
+}
+
+.sort_user_default
+{
+    display: flex;
+    margin-top: 3.5px;
+    transform: scale(0.75);
+    color: var(--primary_highlight_color);
+}
+
+.sort_user_default i
+{
+    cursor: pointer;
+}
+
+.sort_user_active
+{
+    color: var(--text_color);
+}
+
+.users_list_display_container th
+{
+     height: 3rem;
+     color: var(--text_primary_color);
+     
+}
+
+.users_list_display_container td
+{
+    height: 5rem;
+}
+
+.user_logo img
+{
+    height: 40px;
+    width: 40px;
+}
+
+.user_logo
+{
+    width: 20px;
+}
+
+.highlight_text
+{
+    font-weight: bold;
+    color: var(--text_color);
+}
+
+.user_id
+{
+    color: var(--text_primary_color);
+}
+
+.user_checkbox
+{
+    transform: scale(2);  
+    cursor: pointer;
+    position: relative;
+    width: 20px;
+    z-index: 1;
+}
+
+.user_editor
+{
+    cursor: pointer;
+    background-color: var(--bg_main_color);
+    border: 0;
+}
+
+.user_editor:hover
+{
+    color: var(--line_color);
+}
+
+.user_editor + .editor_menu:active, .user_editor:focus + .editor_menu
+{
+    visibility: visible;
+}
+.editor_menu
+{
+    right: 5rem;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    visibility: hidden;
+    width: 140px;
+    background-color: var(--bg_main_color);
+    border: 1px solid var(--line_color);
+    padding: 5px;
+    border-radius: 10px;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+.editor_item
+{
+    color: var(--text_primary_color);
+    padding: 5px;
+    display: flex;
+    height: 25px;
+    border-radius: 8px;
+}
+
+.editor_item:hover
+{
+    background-color: var(--primary_highlight_color_lighter);
+    color: var(--text_color);
+    cursor: pointer;
+}
+
+
+.menuOptionContainer
+{
+    width: 150px;
+    background-color: var(--bg_main_color);
+    border: 1px solid;
+}
+
+.th_users
+{
+    width: 250px;
+}
+.th_id
+{
+    width: 40px;
+}
+
+.th_role
+{
+    width: 60px;
+}
+
+.th_gender
+{
+    width: 40px;
+}
+
+.th_age
+{
+    width: 20px;
+}
+
+.th_company
+{
+    width: 300px;
+}
+
+.user_editor_container
+{
+    padding: 20PX;
+    display: flex;
+    flex-direction: column;
+    width: 40rem;
+    height: 48rem;
+    background-color: var(--bg_main_color);
+    border: 1px solid var(--line_color);
+    border-radius: 20PX;
+
+}
+
+.user_editor_form
+{
+    display: flex;
+    flex-direction: column;
+}
+
+
+.user_editor_form table td
+{
+    border-bottom: 0;
+    padding: 20PX;
+}
+
+.edit_form_item
+{
+    display: flex;
+    flex-direction: column;
+}
+.edit_form_item input
+{
+    margin-top: 10px;
+    height: 1.3rem;
+    border-radius: 5px;
+    border: 1px solid var(--primary_highlight_color);
+}
+
+.gender_selector
+{
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+    width: 10rem;
+}
+
+
+
+.header_user_editor 
+{
+  padding-left: 20px;
+}
+
+.header_user_editor h1
+{
+    font-size: 25px;
+}
+
+.header_user_editor p
+{
+    color: var(--text_primary_color);
+}
+
+.user_avatar_img
+{
+    height: 16rem;
+    width: 16rem;
+    border: 1px solid var(--line_color);
+    border-radius: 15px;
+}
+
+.edit_user_avatar_form
+{    
+    height: 16rem;
+    display: flex;   
+    justify-content: space-between;
+    align-items: flex-start;
+}
+.edit_user_avatar_button
+{
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    padding-top: 20px;
+    margin-left: 40px;
+    padding-right: 9rem;
+    gap: 20px;
+}
+
+.edit_user_avatar_button input, .footer_user_editor button
+{
+    height: 40px;
+    border-radius: 10px;
+    border: 1px solid var(--line_color);
+    cursor: pointer;
+}
+
+.btn_user_avatar_upload
+{
+    background-color: var(--btn_color);
+    color: var(--bg_main_color);
+    width: 200px;
+}
+
+.btn_user_avatar_remove
+{
+    background-color: var(--bg_main_color);
+    color: var(--primary_highlight_color);
+    width: 200px;
+}
+
+.footer_user_editor
+{
+    display: flex;
+    justify-content: flex-end;
+    gap: 20px;
+}
+
+.btn_cancel_edit
+{
+    background-color: var(--btn_color);
+    color: var(--bg_main_color);
+    width: 100px;
+
+}
+
+.btn_done_edit
+{
+     width: 100px;
+    background-color: var(--bg_main_color);
+    color: var(--text_color);
+}
+
+.page_list
+{
+    display: flex;
+}
+
+.input_username_edit
+{
+    margin-top: 10px;
+    border: 1px solid var(--primary_highlight_color);
+    height: 2rem;
+    padding-left: 10px;
+    border-radius: 10px;
+}
+
+.select_user_role_edit
+{
+    margin-top: 10px;
+    height: 1.6rem;
+    border: 1px solid var(--primary_highlight_color);
+    padding-left: 10px;
+    border-radius: 5px;
+}

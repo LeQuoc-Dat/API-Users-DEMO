@@ -1,0 +1,28 @@
+.info_content_container
+{
+    display: flex;
+    justify-content: flex-start;
+    width: 100%;
+}
+
+.info_content
+{
+    border-collapse: separate;
+    border-spacing: 30px;
+}
+
+.info_content td
+{
+    width: 20rem;
+    font-size: 16px;
+}
+
+.info_content div
+{
+    display: flex;
+    flex-direction: column;
+}
+.info_content span
+{
+    color: var(--text_primary_color)
+}

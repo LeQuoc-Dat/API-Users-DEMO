@@ -1,0 +1,44 @@
+.profile_avatar
+{
+    background-image: ;
+    background-color: var(--primary_highlight_color_lighter);
+    background-size:cover;
+    height: 60px;
+    width: 60px;
+    border-radius: 60px;
+    border:1px solid var(--line_color);
+}
+
+.profile_content_title
+{
+    display: flex;
+    justify-content: flex-start;
+}
+
+.profile_content_title h2
+{
+    font-size: 18px;
+}
+
+.proflie_introduce_content
+{
+    display: flex;
+    align-items: center;
+    gap:20px
+}
+
+.introduce_info
+{
+    margin-top: 20px;
+}
+.introduce_info b
+{
+    font-size: 18px;
+    color: var(--text_color);
+}
+.introduce_info p
+{
+    font-size: 16px;
+    color: var(--text_primary_color);
+}
+

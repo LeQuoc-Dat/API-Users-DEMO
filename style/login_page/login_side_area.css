@@ -1,0 +1,50 @@
+.btn_login_light_toogle
+{
+    background-color: var(--bg_highlight_color);
+    margin-bottom: 20px;
+    margin-right: 20px;
+    display: flex;
+    height: 50px;
+    width: 50px;
+    font-size: 16px;
+    color: var(--text_highlight_color);
+    border-radius: 25px;
+    align-items: center;
+    justify-content: center;
+    bottom: 0;
+    right: 0;
+    position: fixed;
+    border: 0;
+    cursor: pointer;
+}
+
+.side_area_logo
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 90px;
+}
+.side_area_logo p
+{
+    margin-top: 0;
+    color: var(--text_plain_color);
+    font-size: 16px;
+}
+.side_area_logo span
+{
+    display: flex;
+    color: var(--text_highlight_color);
+    align-items: center;
+    font-size: 40px;
+}
+
+.btn_login_light_toogle i
+{
+        transform: rotate(-25deg);
+}
+
+.logo_img
+{
+    height: 120px;
+}

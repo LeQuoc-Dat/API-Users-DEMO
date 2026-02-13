@@ -1,0 +1,155 @@
+.header_login_line
+{
+
+    width: 100%;
+    text-align: center;
+    border-bottom: 1px solid;
+    line-height: 0.1em;
+    color: var(--line_color);
+    margin: 10px 0 20px;
+}
+
+.header_login_line span{
+    padding: 0 10px;
+    background: var(--bg_main_color);
+}
+
+.login_content
+{
+    width: 80%;
+    display: flex;
+    flex-direction: column;;
+    align-items: left;
+}
+
+.login_area_header
+{
+    width: 100%;
+    display: flex;
+    text-align: left ;
+    padding-top: 40px;
+    
+}
+
+.login_area_header a
+{
+    color: var(--text_plain_color);
+}
+
+.login_box
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+}
+.login_header
+{
+    text-align: left;
+}
+.login_title
+{
+    color: var(--text_plain_color);
+    font-size: 14px;
+    padding: 0px 0px 30px 0px;
+}
+
+.login_title span
+{
+    color: var(--text_color);
+    font-weight: bold;
+    font-size: 30px;
+} 
+
+.select_login
+{
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 15px;
+    cursor: pointer;
+    gap: 10px;
+}
+
+.log_opt
+{
+    background-color: var(--bg_plain_color);
+    width: 15rem;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px ;
+    font-size: 16px;
+    gap: 10px
+}
+.login_frm
+{
+    max-width: 500px;
+}
+.login_frm table
+{
+    width: 100%;
+}
+
+.login_frm td
+{
+    display: flex;
+}
+
+.login_frm a
+{
+    color: var( --text_link_color);
+}
+.login_support_text
+{
+    justify-content: space-between;
+    align-items: center;
+}
+
+.username, .password, .login
+{
+    font-weight: bold;
+    flex-direction: column;
+    height: 90px;
+}
+.logged_checkbox
+{
+    display: flex;
+}
+
+.username input, .password input
+{
+    background-color: var(--bg_main_color);
+    border: 1px solid var(--line_color);
+    flex-direction: column;
+    border-radius: 10px;
+    height: 90px;
+    
+}
+
+input::placeholder
+{
+    font-size: 12px;
+    color: var(--line_color);
+    padding-left: 10px;
+}
+input
+{
+    
+    outline: none;
+}
+.btn_login
+{
+    background-color: var(--bg_highlight_color);
+    color: var(--text_highlight_color);
+    font-size: 14px;
+    font-weight: bold;
+    height: 45px;
+    border-radius: 10px;
+    border: 1px solid var(--line_color);
+}
+
+.icon_img
+{
+    height: 20px;
+}

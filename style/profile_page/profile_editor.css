@@ -1,0 +1,109 @@
+.personal_info_editor_container
+{
+    padding: 40PX;
+    display: none;
+    flex-direction: column;
+    width: 35rem;
+    background-color: var(--bg_main_color);
+    border: 1px solid var(--line_color);
+    border-radius: 20PX;
+}
+
+.address_info_editor_container
+{
+    padding: 40PX;
+    display: none;
+    flex-direction: column;
+    width: 35rem;
+    background-color: var(--bg_main_color);
+    border: 1px solid var(--line_color);
+    border-radius: 20PX;
+}
+
+.frm_info_editor
+{
+    color: var(--text_color);
+    display: flex;
+    flex-direction: column;
+}
+
+
+.header_info_editor
+{
+    position: sticky;
+    top: 0;
+}
+
+.header_info_editor p
+{
+    color: var(--text_primary_color);
+}
+
+.frm_info_editor table
+{
+    margin-top: 20px;
+}
+
+.frm_info_editor table td
+{
+    padding-right: 20px;
+    padding-bottom: 20px;
+}
+
+.info_editor_item
+{
+    display: flex;
+    flex-direction: column;
+}
+
+.info_editor_item input
+{
+    height: 2rem;
+    border-radius: 10px;
+    border: 1px solid var(--line_color);
+}
+
+.info_editor_item input:focus
+{
+    outline: none;
+}
+
+.info_editor_footer
+{
+    margin-top: 20px;
+    display: flex;
+    justify-content: flex-end;
+    gap: 12px;
+}
+
+.info_editor_footer button
+{
+    cursor: pointer;
+    height: 50px;
+    padding: 15px;
+    border-radius: 7px;
+    font-size: 18px;
+    border: 1px solid var(--line_color);
+}
+
+.btn_cancel_update
+{
+    color: var(--text_color);
+    background-color: var(--bg_main_color);
+}
+
+.btn_cancel_update:hover
+{
+    background-color: var(--primary_highlight_color_lighter);
+}
+
+.btn_save_update
+{
+    color: var(--bg_main_color);
+    background-color: var(--btn_color);
+}
+
+.btn_save_update:hover
+{
+    background-color: var(--highlight_color);
+}

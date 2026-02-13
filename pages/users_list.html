@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style/style.css">
+    <link rel="stylesheet" href="../style/user_page/user_info.css">
+    <link rel="stylesheet" href="../style/user_page/user_searchbar.css">
+    <link rel="stylesheet" href="../style/user_page/user_toolbar.css">
+    <script src="https://kit.fontawesome.com/bc84d83093.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+    <title>API USER DEMO</title>
+</head>
+<body>
+    <div class="dashboard_sidebar_header" id="sidebar_header">
+        <div class="logo_container">
+            <div class="logo">
+            <img class ="logo_img" src="../assets/images/API_logo.png">
+            <span id="sb_expand_txt">API User Manager</span>
+        </div>
+        </div>
+    </div>
+    <div class="dashboard_sidebar" id ="sidebar">
+        <div class="nav_menu_container">
+             <div class="nav_menu">
+            <h3><span>Menu</span></h3>
+            <ul>
+                <li>
+                    <div class="btn_dropdown" id="display_user_dropdown">
+                        <a><i class="fa-solid fa-users"></i><span id="sb_expand_txt"><div class="btn_dropdown_text">
+                            Users Manager <span id="is_users_ready_to_dropdown"> <i class="fa-solid fa-chevron-down"></i></span>
+                        </div></span></a>
+                        
+                    </div>
+                    <div  class="dropdown_content"   id="user_sidebar_dropdown">
+                        <ul>
+                            <li><a href="./users_list.html"><i class="fa-solid fa-address-book"></i> Users List</a></li>
+                            <li><a href="./add_users.html"><i class="fa-solid fa-user-plus"></i>Add Users</a></li>
+                        </ul>
+                    </div>             
+                </li>
+                <li><a href="./profile.html"><i class="fa-solid fa-address-card"></i><span id="sb_expand_txt">Profile</span></a></li>
+                <li><a href="../login.html" id="sign_out"><i class="fa-solid fa-right-from-bracket"></i> <span id="sb_expand_txt">Sign out</span> </a></li>
+            </ul>
+        </div>
+        </div>
+    </div>
+    <div class="dashboard_header">
+        <div class="dashboard_header_left">
+            <button type="button"  class="btn_expand" id="btn_exp"><i class="fa-solid fa-bars"></i></button>
+        </div>
+        <div class="dashboard_header_right">
+            <button type="button" class="btn_light_toggle" id="btn_light_tg"><i class="fa-regular fa-moon"></i></button>
+            <button type="button" class="btn_notification" id="btn_nof"><i class="fa-regular fa-bell"></i></button>
+            <div class = "admin_profile">
+                <div class="admin_img" id="set_admin_img">
+                </div>
+                <button type="button" class="btn_admin_option" id="btn_admin_otp"><span id="admin_name">Admin Name</span><span id="admin_option_display_icon"><i class="fa-solid fa-angle-down"></i></span></button>
+                <div class="admin_option_container" id="display_admin_option">
+                    <ul>
+                        <li><a href="./profile.html"> <i class="fa-solid fa-address-card"></i>Profile</a></li>
+                        <li><a href="../login.html" id="sign_out_opt" > <i class="fa-solid fa-arrow-right-from-bracket"></i>Sign out</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+    <div class="main">
+        <section class="users_list_section" id="home">
+            <div class = "users_list_header">
+                <b>Users List</b>
+                <div class="track_bar">
+                    <a href="../index.html">Home</a> <i class="fa-solid fa-angle-right"></i> Users List
+                </div>
+            </div>
+            <div class = "users_content">
+                <div class = "users_list_toolbar">
+                    <p><span>Users List Manager</span><br>
+                        Manage your users
+                    </p>
+                    <div class = "toolbar">
+                        <button type="button" class="btn_delete_user" id="btn_delete">Delete <i class="fa-solid fa-trash"></i></button>
+                        <a href="add_users.html"><button type="button" class="btn_add_user" id="btn_addUser"><i class="fa-solid fa-plus"></i> Add User</button></a>
+                    </div>
+                </div>
+                <div class ="users_list_search">
+                    
+                    <div class="search_bar">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                        <input type="text" id="txt_search" placeholder="Search...">
+                    </div>
+                    <button  type = "button" class="btn_filter_users" id ="btn_filter"><i class="fa-solid fa-sliders"></i><p>filter</p></button>
+                </div>
+                <diV class = "users_list_display_content" >
+                    <table class = "users_list_display_container" id = "users_display">
+                        <tr>
+                            <th><input type="checkbox" class="user_checkbox" id="chck_users"></th>
+                            <th colspan="2" class = "th_users">
+                                <div class="users_list_display_container_header" >
+                                    Users
+                                    <div class="sort_user_default">
+                                        <i class="fa-solid fa-plus" id="btn_sorting_by_name_incr"></i>
+                                        <i class="fa-solid fa-minus" id="btn_sorting_by_name_decr"></i>
+                                    </div>
+                                </div>
+                            </th>
+                            <th class = "th_id">
+                                <div class="users_list_display_container_header" >
+                                    ID
+                                    <div class="sort_user_default">
+                                        <i class="fa-solid fa-plus" id="btn_sorting_by_id_incr"></i>
+                                        <i class="fa-solid fa-minus" id="btn_sorting_by_id_decr"></i>
+
+                                    </div>
+                                </div>
+                            </th>
+                            <th class = "th_role">
+                                <div class="users_list_display_container_header" >
+                                    Role
+                                    <div class="sort_user_default">
+                                        <i class="fa-solid fa-plus" id="btn_sorting_by_role_incr"></i>
+                                        <i class="fa-solid fa-minus" id="btn_sorting_by_role_decr"></i>
+                                    </div>
+                                </div>
+                            </th>
+
+                            <th class = "th_gender">
+                                <div class="users_list_display_container_header">
+                                    Gender
+                                    <div class="sort_user_default">
+                                        <i class="fa-solid fa-plus" id="btn_sorting_by_gender_incr"></i>
+                                        <i class="fa-solid fa-minus" id="btn_sorting_by_gender_decr"></i>
+                                    </div>
+                                </div>               
+                            </th>
+
+                            <th class = "th_age">
+                                <div class="users_list_display_container_header" >
+                                    Age
+                                    <div class="sort_user_default">
+                                        <i class="fa-solid fa-plus" id="btn_sorting_by_age_incr"></i>
+                                        <i class="fa-solid fa-minus" id="btn_sorting_by_age_decr"></i>
+                                    </div>
+                                </div>
+                            </th>
+
+                            <th class = "th_company" colspan="2">
+                                <div class="users_list_display_container_header" >
+                                    Company
+                                </div>
+                            </th>
+                        </tr>
+                    </table>
+                </diV>
+                <div class = "users_list_pagination">
+                    <p>Showing <strong>1</strong> to <strong>7</strong> of <strong>30</strong> </p>
+                    <div class = "pagination">
+                        <button  type = 'submit' class="btn_page_switch" id ="btn_prev_page"><i class="fa-solid fa-arrow-left"></i></button>
+                        <div class="page_list"></div>
+                        <button  type = 'submit'class ="btn_page_switch" id ="btn_next_page"><i class="fa-solid fa-arrow-right"></i></button>
+                    </div>
+                </div>
+            </div> 
+        </section>
+    </div>
+    <footer></footer>
+    <div class="modal" id="modal_editor">
+        <div class="user_editor_container">
+            <div class="modal_header">
+                <button class="close_modal" id ="btn_exit_editor"><i class="fa-solid fa-xmark"></i></button>
+            </div>
+            
+            <form class="user_editor_form" id ="frm_update_user">
+                <div class = "header_user_editor">
+                <h1>User id: <span id ="current_user_id">unknown</span></h1>
+                <p>Update, fix your users profile</p>
+                </div>
+                <table>
+                    <tr> <td><div class="edit_form_item">
+                                   <span>First name</span>
+                                   <input class="input_username_edit" id="update_user_first_name" type="text" placeholder="typing a new first name..." required>
+                             </div>
+                         </td>
+                         <td>
+                            <div class="edit_form_item">
+                                   <span>Last name</span>
+                                   <input class="input_username_edit" id="update_user_last_name" type="text" placeholder="typing a new last name..." required>
+                             </div>
+                         </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <div class="edit_form_item">
+                                <span>Role</span>
+                                <select class ="select_user_role_edit" id="update_user_role">
+                                    <option value="admin">Admin</option>
+                                    <option value="moderator">Moderator</option>
+                                    <option value="user">User</option>
+                                </select>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="edit_form_item">
+                                <span>Gender</span>
+                                <div class="gender_selector">
+                                    <div >
+                                        <span>Male</span>
+                                        <input type="radio" id="chk_gender_male" name="update_gender" value="male" required>
+                                    </div>
+                                    <div >
+                                        <span>Female</span>
+                                        <input type="radio" id="chk_gender_female" name="update_gender" idvalue="female" required>
+                                    </div>              
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                       <td>
+                           <div class="edit_form_item">
+                               <span>Age</span>
+                               <input id="update_user_age" type="number" required>
+                           </div>
+                       </td>
+                       <td>
+                            <div class="edit_form_item">
+                                <span>Company</span>
+                                <input type="text" id="update_user_company" placeholder="typing new company" required>
+                            </div>
+                       </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            <div class="edit_user_avatar_form">
+                                <img src="" class="user_avatar_img" id="update_user_avatar">
+                                <div class="edit_user_avatar_button">
+                                     <input type="button" class="btn_user_avatar_upload" id="upload_new_user_avatar" value="Change Avatar">
+                                     <input type="button" class="btn_user_avatar_remove" id="remove_user_avatar" value="Remove avatar">
+                                     <input id="select_avatar_field" type="file" accept="images/*" hidden>
+                                </div>
+                               
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+                <div class="footer_user_editor">
+                    <button type="button" class="btn_cancel_edit" id="btn_cancel_edit">Cancel</button>
+                    <button type="submit" class="btn_done_edit">Done</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <script type="module" src="../services/API_UserData.js"></script>
+    <script type="module" src="../components/admin_loader.js"></script>
+    <script src="../main.js"></script>
+   
+</body>
+</html>

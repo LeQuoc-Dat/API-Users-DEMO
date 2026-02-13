@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style/style.css">
+    <link rel="stylesheet" href="../style/profile_page/profile_layout.css">
+    <link rel="stylesheet" href="../style/profile_page/profile_introduce.css">
+    <link rel="stylesheet" href="../style/profile_page/profile_info.css">
+    <link rel="stylesheet" href="../style/profile_page/profile_editor.css">
+
+    <script src="https://kit.fontawesome.com/bc84d83093.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+    <title>API USER DEMO</title>
+</head>
+<body>
+    <div class="dashboard_sidebar_header" id="sidebar_header">
+        <div class="logo_container">
+            <div class="logo">
+            <img class ="logo_img" src="../assets/images/API_logo.png">
+            <span>API User Manager</span>
+        </div>
+        </div>
+    </div>
+    <diV class="dashboard_sidebar" id ="sidebar">
+         <div class="nav_menu_container">
+             <div class="nav_menu">
+            <h3><span>Menu</span></h3>
+            <ul>
+                <li>
+                    <div class="btn_dropdown" id="display_user_dropdown">
+                        <a><i class="fa-solid fa-users"></i><span id="sb_expand_txt"><div class="btn_dropdown_text">
+                            Users Manager <span id="is_users_ready_to_dropdown"> <i class="fa-solid fa-chevron-down"></i></span>
+                        </div></span></a>
+                        
+                    </div>
+                    <div  class="dropdown_content"   id="user_sidebar_dropdown">
+                        <ul>
+                            <li><a href="./users_list.html"><i class="fa-solid fa-address-book"></i> Users List</a></li>
+                            <li><a href="./add_users.html"><i class="fa-solid fa-user-plus"></i>Add Users</a></li>
+                        </ul>
+                    </div>             
+                </li>
+                <li><a href="./profile.html"><i class="fa-solid fa-address-card"></i><span id="sb_expand_txt">Profile</span></a></li>
+                <li><a href="../login.html" id="sign_out"><i class="fa-solid fa-right-from-bracket"></i> <span id="sb_expand_txt">Sign out</span> </a></li>
+            </ul>
+        </div>
+        </div>
+    </diV>
+    <div class="dashboard_header">
+        <div class="dashboard_header_left">
+            <button type="button"  class="btn_expand" id="btn_exp"><i class="fa-solid fa-bars"></i></button>
+        </div>
+        <div class="dashboard_header_right">
+            <button type="button" class="btn_light_toggle" id="btn_light_tg"><i class="fa-regular fa-moon"></i></button>
+            <button type="button" class="btn_notification" id="btn_nof"><i class="fa-regular fa-bell"></i></button>
+            <div class = "admin_profile">
+                <div class="admin_img" id="set_admin_img">
+                </div>
+                <button type="button" class="btn_admin_option" id="btn_admin_otp"><span id="admin_name">Admin Name</span><span id="admin_option_display_icon"><i class="fa-solid fa-angle-down"></i></span></button>
+                <div class="admin_option_container" id="display_admin_option">
+                    <ul>
+                        <li><a href="./profile.html"> <i class="fa-solid fa-address-card"></i>Profile</a></li>
+                        <li><a href="../login.html" id="sign_out_opt" > <i class="fa-solid fa-arrow-right-from-bracket"></i>Sign out</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+    <div class="main">
+        <section class="profile_section">
+                        <div class = "users_list_header">
+                <b>Profile</b>
+                <div class="track_bar">
+                    <a href="../pages/home.html">Home</a> <i class="fa-solid fa-angle-right"></i> Profile
+                </div>
+            </div>
+
+            <div class="profile_content">
+                <div class="profile_content_title">
+                    <h2>Profile</h2>
+                </div>
+                <div class="proflie_introduce">
+                   
+                    <div class="proflie_introduce_content">
+                        <div class="profile_avatar" id="admin_avatar_profile"></div>
+                        <div class="introduce_info">
+                            <b title="admin_name_profile" id="admin_fullname">Admin name</b>
+                            <p><span id="admin_jod_intro">Admin jod</span> | <span id="admin_city_state_intro">city</span>. </p>
+                        </div>
+                    </div>
+                    <button class="edit_profile_button" id="btn_open_personal_1_editor"><i class="fa-solid fa-pen"></i> Edit</button>
+                </div>
+                <div class="personal_info">
+                    <div class="sub_info_header">
+                        <h2>Personal Infomation</h2>
+                        <button class="edit_profile_button" id="btn_open_personal_2_editor"><i class="fa-solid fa-pen"></i> Edit</button>
+                    </div>
+                    <div class="info_content_container">
+                        <table class="info_content">
+                            <tr>
+                                <td>
+                                    <div>
+                                        <span>First Name</span>
+                                        <b id="admin_first_name_profile">Admin's first name</b>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div>
+                                        <span>Last Name</span>
+                                        <b id="admin_last_name_profile">Admin's last name</b>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div>
+                                        <span>Email address</span>
+                                        <b id="admin_email_profile">Admin's email</b>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div>
+                                        <span>Phone</span>
+                                        <b id="admin_phone_profile">Admin's phone</b>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div>
+                                        <span>Bio</span>
+                                        <b id="admin_jod_profile">Admin jod</b>
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+                <div class="address_info">
+                    <div class="sub_info_header">
+                        <h2>Address</h2>
+                        <button class="edit_profile_button" id="btn_open_address_editor"><i class="fa-solid fa-pen"></i> Edit</button>
+                    </div>
+                    <div class="info_content_container">
+                            <table class="info_content">
+                                <tr>
+                                    <td>
+                                        <div>
+                                            <span>Country</span>
+                                            <b  id="admin_country_profile"  >Admin country</b>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div>
+                                            <span>City/State</span>
+                                            <b id="admin_city_state_profile">Admin city/state</b>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                   
+                                    <td>
+                                        <div>
+                                             <span>Postal Code</span>
+                                             <b  id="admin_postal_code_profile"  >Admin postal code</b>
+                                        </div>
+                                       
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    <div class="modal" id="modal_editor">
+        <div class="personal_info_editor_container" id="personal_info_editor_display">
+            <div class="modal_header">
+                <button class="close_modal" id ="btn_close_personal_frm"><i class="fa-solid fa-xmark"></i></button>
+            </div>
+            <form class="frm_info_editor" >
+                <div class = "header_info_editor">
+                    <h2>Edit Personal Infomation</h2>
+                    <p>Update your details to keep your profile up-to-date</p>
+                </div>
+                <table>
+                    <tr>
+                        <td>
+                            <div class="info_editor_item">
+                                <span>First Name</span>
+                                <input type="text" id="edit_first_name" required>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="info_editor_item">
+                                <span>Last Name</span>
+                                <input type="text" id="edit_last_name" required>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="info_editor_item">
+                                <span>Email Address</span>
+                                <input type="email" id="edit_email" required>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="info_editor_item">
+                                <span>Phone</span>
+                                <input type="text" id="edit_phone" required>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            <div class="info_editor_item">
+                                <span>Bio</span>
+                                <input type="text" id="edit_jod" required>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+                <div class="info_editor_footer">
+                        <button type="button" class="btn_cancel_update" id="btn_cancel_personal_update">
+                            Cancel
+                        </button>
+                        <button type="submit" class="btn_save_update" id="btn_confirm_personal_update">
+                            Save Change
+                        </button>
+                </div>
+
+            </form>
+        </div>
+        <div class="address_info_editor_container" id="address_info_editor_display">
+            <div class="modal_header">
+                <button class="close_modal" id ="btn_close_address_frm"><i class="fa-solid fa-xmark"></i></button>
+            </div>
+            <form class="frm_info_editor">
+                <div class = "header_info_editor">
+                    <h2>Edit Address Infomation</h2>
+                    <p>Update your details to keep your profile up-to-date</p>
+                </div>
+                <table>
+                    <tr>
+                        <td>
+                            <div class="info_editor_item">
+                                <span>Country</span>
+                                <input type="text" id="edit_country" required>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="info_editor_item">
+                                <span>City/State</span>
+                                <input type="text" id="edit_city_state" required> 
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="info_editor_item">
+                                <span>Postal Code</span>
+                                <input type="text" id="edit_postal_code" required>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+                <div class="info_editor_footer">
+                        <button type="button" class="btn_cancel_update" id="btn_cancel_address_update">
+                            Cancel
+                        </button>
+                        <button type="submit" class="btn_save_update" id="btn_confirm_address_update">
+                            Save Change
+                        </button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <script src="../main.js"></script>
+    <script type="module" src="../components/admin_loader.js"></script>
+    <script type="module" src="../components/profile_loader.js"></script>
+    <script type="module" src="../components/profile_editor_loader.js"></script>
+    <script type="module" src="../components/pesonal_info_editor_loader.js"></script>
+    <script type="module" src="../components/address_info_editor_loader.js"></script>
+</body>
+</html>

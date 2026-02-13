@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style/style.css">
+    <link rel="stylesheet" href="../style/user_page/add_users/add_users_layout.css">
+    <link rel="stylesheet" href="../style/user_page/add_users/add_user_form.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/bc84d83093.js" crossorigin="anonymous"></script>
+    <title>API USER DEMO</title>
+</head>
+<body>
+    <div class="dashboard_sidebar_header" id="sidebar_header">
+        <div class="logo_container">
+            <div class="logo">
+            <img class ="logo_img" src="../assets/images/API_logo.png">
+            <span>API User Manager</span>
+        </div>
+        </div>
+    </div>
+    <div class="dashboard_sidebar" id ="sidebar">
+         <div class="nav_menu_container">
+             <div class="nav_menu">
+            <h3><span>Menu</span></h3>
+            <ul>
+                <li>
+                    <div class="btn_dropdown" id="display_user_dropdown">
+                        <a><i class="fa-solid fa-users"></i><span id="sb_expand_txt"><div class="btn_dropdown_text">
+                            Users Manager <span id="is_users_ready_to_dropdown"> <i class="fa-solid fa-chevron-down"></i></span>
+                        </div></span></a>
+                        
+                    </div>
+                    <div  class="dropdown_content"   id="user_sidebar_dropdown">
+                        <ul>
+                            <li><a href="./users_list.html"><i class="fa-solid fa-address-book"></i> Users List</a></li>
+                            <li><a href="./add_users.html"><i class="fa-solid fa-user-plus"></i>Add Users</a></li>
+                        </ul>
+                    </div>             
+                </li>
+                <li><a href="./profile.html"><i class="fa-solid fa-address-card"></i><span id="sb_expand_txt">Profile</span></a></li>
+                <li><a href="../login.html" id="sign_out"><i class="fa-solid fa-right-from-bracket"></i> <span id="sb_expand_txt">Sign out</span> </a></li>
+            </ul>
+        </div>
+        </div>
+    </div>
+    <div class="dashboard_header">
+        <div class="dashboard_header_left">
+            <button type="button"  class="btn_expand" id="btn_exp"><i class="fa-solid fa-bars"></i></button>
+        </div>
+        <div class="dashboard_header_right">
+            <button type="button" class="btn_light_toggle" id="btn_light_tg"><i class="fa-regular fa-moon"></i></button>
+            <button type="button" class="btn_notification" id="btn_nof"><i class="fa-regular fa-bell"></i></button>
+            <div class = "admin_profile">
+                <div class="admin_img" id="set_admin_img">
+                </div>
+                <button type="button" class="btn_admin_option" id="btn_admin_otp"><span id="admin_name">Admin Name</span><span id="admin_option_display_icon"><i class="fa-solid fa-angle-down"></i></span></button>
+                <div class="admin_option_container" id="display_admin_option">
+                    <ul>
+                        <li><a href="./profile.html"> <i class="fa-solid fa-address-card"></i>Profile</a></li>
+                        <li><a href="../login.html" id="sign_out_opt" > <i class="fa-solid fa-arrow-right-from-bracket"></i>Sign out</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+    <div class="main">
+        <section class="users_list_section" id="home">
+            <div class = "users_list_header">
+                <b>Add User</b>
+                <div class="track_bar">
+                    <a href="../index.html">Home</a> <i class="fa-solid fa-angle-right"></i> Add Users
+                </div>
+            </div>
+            <div class = "add_users_content">
+                <form class="frm_user_info" id="user_profile">
+                    
+                        <table>
+                            <tr>
+                                <th colspan="4">
+                                    <h3 >User Description</h3>
+                                </th>
+                            </tr>
+                            <tr>
+                                <td colspan="3">
+                                    <div class="input_username">Username
+                                        <input type="text" name="username">
+                                    </div>
+                                    
+                                    
+                                </td>
+                                <td colspan="1">
+                                    <div class="select_role">
+                                        Role
+                                        <select name="role">
+                                            <option> Admin</option>
+                                            <option> User</option>
+                                        </select>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    Gender 
+                                    <div class="gender_container">
+                                       <div >Male <input type="radio" name="gender" value="Male" required></div>
+                                       <div >Female<input type="radio" name="gender" value="Female" required></div> 
+                                    </div>
+                                    
+                                </td>
+                                <td>
+                                    <div class ="date_select">
+                                        Day <select class="selectDOB" name="dayOfBirth" id ="opt_DOB" required>
+                                        </select>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="date_select">
+                                    Month <select class="select_MOB" name="monthOfBirth" id="opt_MOB" required> 
+                                    <option value=1 >January</option>
+                                    <option value=2 >February</option>
+                                    <option value=3 >March</option>
+                                    <option value=4 >April </option>
+                                    <option value=5 >May</option>
+                                    <option value=6 >June</option>
+                                    <option value=7 >July </option>
+                                    <option value=8 >August</option>
+                                    <option value=9 >September</option>
+                                    <option value=10 >October</option>
+                                    <option value=11 >November </option>
+                                    <option value=12 >December</option>
+                                    </select>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="date_select">
+                                        Year <select  class="select_YOB" name="yearOfBirth" id="opt_YOB" required>
+                                        </select>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="4">
+                                    <div class="company_Container">
+                                        Company
+                                        <textarea name="company">
+                                        </textarea>
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                        
+                        <diV class ="frm_footer">
+                            <div class = "upload_user_img">
+                            <div class="Upload_user_img_frm_header"> 
+                                <h3>Users Images</h3>
+                            </div>
+                            <div class ="users_img_area">
+                                <div class ="user_img">
+                                    <input type="file" id = "img_upload" 
+                                    accept="images/png, images/JPG, images/SVG, images/GIF">
+                                    <label for="img_upload">
+                                        <i class="fa-solid fa-upload"></i>
+                                    <p><strong>Click to upload</strong>
+                                    or drag and drop SVG, PNG, JPG or GIF</p>
+                                </label>
+                                </div>
+                                
+                            </div>
+                        </div>
+                              <button type="submit" id="btn_add">Add Users</button>
+                        </diV>
+                      
+                </form>
+            </div>
+        </section>
+    </div>
+    <footer></footer>
+    <script src="../components/date_loader.js"></script>
+    <script type="module" src="../components/add_user.js"></script>
+    <script src="../main.js"></script>
+    <script type="module" src="../components/admin_loader.js"></script>
+</body>
+</html>

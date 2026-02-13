@@ -1,0 +1,8 @@
+.add_users_content{
+    background-color: var(--bg_primary_color);
+    width: 60rem;
+    height: 55rem;
+    display: flex;
+    justify-content: center;
+    border-radius: 15px;
+}

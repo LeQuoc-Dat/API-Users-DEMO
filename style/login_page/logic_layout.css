@@ -1,0 +1,57 @@
+
+:root
+{
+    --bg_main_color: white;
+    --bg_highlight_color: rgba(45, 0, 248, 0.758);
+    --bg_highlight_plain_color: rgb(8, 109, 191);
+    --bg_plain_color: rgba(230, 230, 237, 0.538);
+    --bg_wallpager: url("/assets/images/login_wallpaper.png");
+   
+    --text_color: rgb(60, 59, 59);
+    --text_highlight_color: white;
+    --text_link_color: rgb(92, 153, 234);
+    --text_plain_color: rgb(162, 149, 149);
+
+    --line_color: rgb(186, 201, 201);
+    
+
+}
+button
+{
+    cursor: pointer;
+}
+body
+{
+    font-family: 'Outfit', sans-serif;
+    font-size: 14px;
+    color: var(--text_color);
+    width: 100%;
+    height: 100vh;
+    margin: 0;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows: auto;
+    grid-template-areas: "main_content side_content";
+}
+
+.main_area
+{
+    grid-area: main_content;
+    display: flex;
+    justify-content: center;
+    background-color: var(--bg_main_color);
+}
+.side_area
+{
+    background-image: var(--bg_wallpager);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    grid-area: side_content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+a{
+    text-decoration: none;
+}
